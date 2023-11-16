@@ -9,7 +9,6 @@
 
 namespace SUVCServiceAPI.Entities
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -37,7 +36,6 @@ namespace SUVCServiceAPI.Entities
         public virtual ICollection<Requests> Requests { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Requests> Requests1 { get; set; }
-        [JsonIgnore]
         public virtual Roles Roles { get; set; }
     }
 }

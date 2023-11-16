@@ -211,9 +211,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SUVCServiceModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Entities\sysdiagrams.cs">
-      <DependentUpon>SUVCServiceModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Entities\Users.cs">
       <DependentUpon>SUVCServiceModel.tt</DependentUpon>
     </Compile>
@@ -232,8 +229,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Entities\SUVCServiceModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>SUVCServiceModel.Context.cs</LastGenOutput>
       <DependentUpon>SUVCServiceModel.edmx</DependentUpon>
+      <LastGenOutput>SUVCServiceModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Entities\SUVCServiceModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

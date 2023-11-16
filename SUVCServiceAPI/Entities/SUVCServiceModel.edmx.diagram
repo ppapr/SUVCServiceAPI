@@ -4,24 +4,23 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0382893d770d45baa0157c683b0e9a56" Name="Diagram1">
-        <EntityTypeShape EntityType="SUVCServiceDbModel.Equipment" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SUVCServiceDbModel.LocationEquipment" Width="1.5" PointX="7.5" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SUVCServiceDbModel.PriorityRequest" Width="1.5" PointX="8.25" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SUVCServiceDbModel.RegistryPrograms" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SUVCServiceDbModel.Requests" Width="1.5" PointX="10.5" PointY="4" IsExpanded="true" />
+      <Diagram DiagramId="bf898ec3b55143deba8cb43d6e4a5293" Name="Diagram1">
+        <EntityTypeShape EntityType="SUVCServiceDbModel.Equipment" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="SUVCServiceDbModel.LocationEquipment" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SUVCServiceDbModel.PriorityRequest" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SUVCServiceDbModel.RegistryPrograms" Width="1.5" PointX="12" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SUVCServiceDbModel.Requests" Width="1.5" PointX="7.5" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="SUVCServiceDbModel.Roles" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SUVCServiceDbModel.SparesEquipment" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SUVCServiceDbModel.Specialization" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SUVCServiceDbModel.SparesEquipment" Width="1.5" PointX="7.5" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SUVCServiceDbModel.Specialization" Width="1.5" PointX="9.75" PointY="2.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SUVCServiceDbModel.StatusEquipment" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SUVCServiceDbModel.StatusRequest" Width="1.5" PointX="8.25" PointY="8.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SUVCServiceDbModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SUVCServiceDbModel.StatusRequest" Width="1.5" PointX="5.25" PointY="9.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SUVCServiceDbModel.Users" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
-        <AssociationConnector Association="SUVCServiceDbModel.FK_Equipment_SparesEquipment" ManuallyRouted="false" />
+        <AssociationConnector Association="SUVCServiceDbModel.FK_Equipment_LocationEquipment1" ManuallyRouted="false" />
         <AssociationConnector Association="SUVCServiceDbModel.FK_Equipment_StatusEquipment" ManuallyRouted="false" />
         <AssociationConnector Association="SUVCServiceDbModel.FK_Equipment_Users" ManuallyRouted="false" />
-        <AssociationConnector Association="SUVCServiceDbModel.FK_LocationEquipment_Equipment" ManuallyRouted="false" />
         <AssociationConnector Association="SUVCServiceDbModel.FK_Requests_Equipment" ManuallyRouted="false" />
+        <AssociationConnector Association="SUVCServiceDbModel.FK_SparesEquipment_Equipment" ManuallyRouted="false" />
         <AssociationConnector Association="SUVCServiceDbModel.FK_Requests_PriorityRequest" ManuallyRouted="false" />
         <AssociationConnector Association="SUVCServiceDbModel.FK_RegistryPrograms_Specialization" ManuallyRouted="false" />
         <AssociationConnector Association="SUVCServiceDbModel.FK_Requests_StatusRequest" ManuallyRouted="false" />

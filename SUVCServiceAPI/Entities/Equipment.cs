@@ -17,24 +17,25 @@ namespace SUVCServiceAPI.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Equipment()
         {
-            this.LocationEquipment = new HashSet<LocationEquipment>();
             this.Requests = new HashSet<Requests>();
+            this.SparesEquipment = new HashSet<SparesEquipment>();
         }
     
         public int ID { get; set; }
         public string EquipmentName { get; set; }
         public string EquipmentDescription { get; set; }
+        public string NetworkName { get; set; }
+        public string InventoryName { get; set; }
         public int IDOwnerEquipment { get; set; }
-        public int IDLocation { get; set; }
-        public Nullable<int> IDSpare { get; set; }
         public int IDStatus { get; set; }
+        public int LocationAuditorium { get; set; }
     
-        public virtual SparesEquipment SparesEquipment { get; set; }
+        public virtual LocationEquipment LocationEquipment { get; set; }
         public virtual StatusEquipment StatusEquipment { get; set; }
         public virtual Users Users { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<LocationEquipment> LocationEquipment { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Requests> Requests { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SparesEquipment> SparesEquipment { get; set; }
     }
 }

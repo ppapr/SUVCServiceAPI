@@ -14,17 +14,10 @@ namespace SUVCServiceAPI.Entities
     
     public partial class SparesEquipment
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public SparesEquipment()
-        {
-            this.Equipment = new HashSet<Equipment>();
-        }
-    
         public int ID { get; set; }
         public int IDEquipment { get; set; }
         public string SpareName { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Equipment> Equipment { get; set; }
+        public virtual Equipment Equipment { get; set; }
     }
 }

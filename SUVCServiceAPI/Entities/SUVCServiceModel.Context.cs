@@ -35,7 +35,6 @@ namespace SUVCServiceAPI.Entities
         public virtual DbSet<Specialization> Specialization { get; set; }
         public virtual DbSet<StatusEquipment> StatusEquipment { get; set; }
         public virtual DbSet<StatusRequest> StatusRequest { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Users> Users { get; set; }
     }
 }

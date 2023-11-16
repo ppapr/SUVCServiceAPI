@@ -17,7 +17,7 @@ namespace SUVCServiceAPI.Entities
         public int ID { get; set; }
         public string Description { get; set; }
         public System.DateTime DateCreateRequest { get; set; }
-        public System.DateTime DateExecuteRequest { get; set; }
+        public Nullable<System.DateTime> DateExecuteRequest { get; set; }
         public int IDUserRequest { get; set; }
         public Nullable<int> IDExecutorRequest { get; set; }
         public int IDEquipment { get; set; }

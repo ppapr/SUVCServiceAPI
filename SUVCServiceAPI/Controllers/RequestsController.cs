@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using SUVCServiceAPI.Entities;
+using SUVCServiceAPI.Models;
 
 namespace SUVCServiceAPI.Controllers
 {
@@ -17,9 +18,10 @@ namespace SUVCServiceAPI.Controllers
         private SUVCServiceDbEntities db = new SUVCServiceDbEntities();
 
         // GET: api/Requests
-        public IQueryable<Requests> GetRequests()
+        [ResponseType(typeof(List<ResponseRequests>))]
+        public IHttpActionResult GetRequests()
         {
-            return db.Requests;
+            return Ok(db.Requests.ToList().ConvertAll(p => new ResponseRequests(p)));
         }
 
         // GET: api/Requests/5
