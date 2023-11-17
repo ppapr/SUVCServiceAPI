@@ -29,7 +29,8 @@ namespace SUVCServiceAPI.Entities
         public string Login { get; set; }
         public string Password { get; set; }
         public Nullable<int> IDRole { get; set; }
-    
+        public string FullName => Surname + " " + Name + " " + MiddleName;
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Equipment> Equipment { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

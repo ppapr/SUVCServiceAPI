@@ -14,10 +14,10 @@ namespace SUVCServiceAPI.Models
             Description = requests.Description;
             DateCreateRequest = requests.DateCreateRequest;
             DateExecuteRequest = (DateTime)requests.DateExecuteRequest;
-            UserRequestName = requests.Users.Name;
-            UserExecutorName = requests.Users1.Name;
+            UserRequestName = requests.Users1.FullName;
+            UserExecutorName = requests.Users.FullName;
             PriorityName = requests.PriorityRequest.NamePriority;
-            EquipmentName = requests.Equipment.EquipmentName;
+            EquipmentName = requests.Equipment.EquipmentName + " " + requests.Equipment.NetworkName;
             StatusName = requests.StatusRequest.StatusName;
         }
         public int ID { get; set; }
