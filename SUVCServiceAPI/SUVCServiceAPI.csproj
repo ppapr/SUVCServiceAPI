@@ -165,6 +165,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\EquipmentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RegistryProgramsController.cs" />
     <Compile Include="Controllers\RequestsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -220,6 +221,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ResponseEquipment.cs" />
+    <Compile Include="Models\ResponseRegistry.cs" />
     <Compile Include="Models\ResponseRequests.cs" />
     <Compile Include="Models\ResponseUsers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
