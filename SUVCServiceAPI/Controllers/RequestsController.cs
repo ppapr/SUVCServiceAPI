@@ -37,6 +37,32 @@ namespace SUVCServiceAPI.Controllers
             return Ok(requests);
         }
 
+        [ResponseType(typeof(Requests))]
+        public IHttpActionResult GetRequestsByUserRequestName(int userRequest)
+        {
+            var requests = db.Requests.Where(r => r.Users1.ID == userRequest).ToList();
+            if (requests == null || !requests.Any())
+            {
+                return NotFound();
+            }
+
+            var responseRequests = requests.Select(r => new ResponseRequests(r)).ToList();
+            return Ok(responseRequests);
+        }
+
+        [ResponseType(typeof(Requests))]
+        public IHttpActionResult GetRequestsByUserExecutorName(int userExecutor)
+        {
+            var requests = db.Requests.Where(r => r.Users.ID == userExecutor).ToList();
+            if (requests == null || !requests.Any())
+            {
+                return NotFound();
+            }
+
+            var responseRequests = requests.Select(r => new ResponseRequests(r)).ToList();
+            return Ok(responseRequests);
+        }
+
         // PUT: api/Requests/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutRequests(int id, Requests requests)
