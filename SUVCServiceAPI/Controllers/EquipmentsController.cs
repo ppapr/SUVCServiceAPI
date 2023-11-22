@@ -37,6 +37,19 @@ namespace SUVCServiceAPI.Controllers
             return Ok(equipment);
         }
 
+        [ResponseType(typeof(Equipment))]
+        public IHttpActionResult GetEquipmentUser(int user)
+        {
+            var equipment = db.Equipment.Where(r => r.Users.ID == user).ToList();
+            if (equipment == null || !equipment.Any())
+            {
+                return NotFound();
+            }
+
+            var responseEquipment = equipment.Select(r => new ResponseEquipment(r)).ToList();
+            return Ok(responseEquipment);
+        }
+
         // PUT: api/Equipments/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutEquipment(int id, Equipment equipment)
