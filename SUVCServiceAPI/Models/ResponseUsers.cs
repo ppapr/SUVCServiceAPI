@@ -18,6 +18,7 @@ namespace SUVCServiceAPI.Models
             Password = users.Password;
             Role = users.Roles.RoleName;
             FullName = users.FullName;
+            IDRole = users.Roles.ID;
         }
 
         public int ID { get; set; }
@@ -28,6 +29,7 @@ namespace SUVCServiceAPI.Models
         public string Password { get; set; }
         public string Role { get; set; }
         public string FullName { get; set; }
+        public int IDRole { get; set; }
 
     }
 }
