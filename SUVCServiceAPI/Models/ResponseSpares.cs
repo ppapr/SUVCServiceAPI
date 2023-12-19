@@ -12,9 +12,11 @@ namespace SUVCServiceAPI.Models
             ID = spare.ID;
             SpareName = spare.SpareName;
             Equipment = spare.Equipment.EquipmentName + " " + spare.Equipment.InventoryName + " " + spare.Equipment.NetworkName;
+            IDEquipment = spare.Equipment.ID;
         }
         public int ID { get; set; }
         public string SpareName { get; set; }
         public string Equipment { get; set; }
+        public int IDEquipment { get; set; }
     }
 }

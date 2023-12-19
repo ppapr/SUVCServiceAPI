@@ -16,7 +16,9 @@ namespace SUVCServiceAPI.Models
             InventoryName=equipment.InventoryName;
             OwnerName = equipment.Users.FullName;
             StatusName = equipment.StatusEquipment.NameStatus;
-            Location = equipment.LocationAuditorium.ToString();
+            LocationAuditorium = equipment.LocationEquipment.Auditorium;
+            IDOwnerEquipment = equipment.Users.ID;
+            IDStatus = equipment.StatusEquipment.ID;
         }
         public int ID { get; set; }
         public string EquipmentName { get; set; }
@@ -25,7 +27,9 @@ namespace SUVCServiceAPI.Models
         public string InventoryName { get; set; }
         public string OwnerName { get; set; }
         public string StatusName { get; set; }
-        public string Location { get; set; }
+        public int IDOwnerEquipment { get; set; }
+        public int IDStatus { get; set; }
+        public int LocationAuditorium { get; set; }
 
     }
 }
