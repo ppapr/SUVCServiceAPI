@@ -39,19 +39,20 @@ namespace SUVCServiceAPI.Controllers
         }
 
         [ResponseType(typeof(List<ResponseUsers>))]
-        public IHttpActionResult GetUser(int idrole)
+        public IHttpActionResult GetUsers(int idrole)
         {
-            Users users = db.Users.FirstOrDefault(p => p.IDRole == idrole);
+            List<Users> usersList = db.Users.Where(p => p.IDRole == idrole).ToList();
 
-            if (users == null)
+            if (usersList == null || usersList.Count == 0)
             {
                 return NotFound();
             }
 
-            var responseUser = new ResponseUsers(users);
+            var responseUsersList = usersList.Select(user => new ResponseUsers(user)).ToList();
 
-            return Ok(responseUser);
+            return Ok(responseUsersList);
         }
+
 
 
         // GET: api/Users/5
