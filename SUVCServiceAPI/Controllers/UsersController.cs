@@ -39,7 +39,7 @@ namespace SUVCServiceAPI.Controllers
         }
 
         [ResponseType(typeof(List<ResponseUsers>))]
-        public IHttpActionResult GetUsers(int idrole)
+        public IHttpActionResult GetUsersRole(int idrole)
         {
             List<Users> usersList = db.Users.Where(p => p.IDRole == idrole).ToList();
 
