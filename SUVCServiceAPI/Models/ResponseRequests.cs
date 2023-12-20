@@ -19,9 +19,11 @@ namespace SUVCServiceAPI.Models
             PriorityName = requests.PriorityRequest.NamePriority;
             EquipmentName = requests.Equipment.EquipmentName + " " + requests.Equipment.NetworkName;
             StatusName = requests.StatusRequest.StatusName;
-            EquipmentID = requests.IDEquipment;
-            PriorityID = requests.IDPriority;
-            StatusID = requests.IDStatus;
+            IDEquipment = requests.Equipment.ID;
+            IDPriority = requests.IDPriority;
+            IDStatus = requests.IDStatus;
+            IDUserRequest = requests.Users1.ID;
+            IDExecutorRequest = requests.Users.ID;
         }
         public int ID { get; set; }
         public string Description { get; set; }
@@ -32,8 +34,10 @@ namespace SUVCServiceAPI.Models
         public string StatusName { get; set; }
         public string PriorityName { get; set; }
         public string EquipmentName { get; set; }
-        public int EquipmentID { get; set; }
-        public int PriorityID { get; set; }
-        public int StatusID { get; set; }
+        public int IDEquipment { get; set; }
+        public int IDPriority { get; set; }
+        public int IDStatus { get; set; }
+        public int IDUserRequest { get; set; }
+        public int IDExecutorRequest { get; set; }
     }
 }
