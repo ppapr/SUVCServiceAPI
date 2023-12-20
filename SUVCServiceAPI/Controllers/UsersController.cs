@@ -38,6 +38,21 @@ namespace SUVCServiceAPI.Controllers
             return Ok(responseUser);
         }
 
+        [ResponseType(typeof(List<ResponseUsers>))]
+        public IHttpActionResult GetUser(int idrole)
+        {
+            Users users = db.Users.FirstOrDefault(p => p.IDRole == idrole);
+
+            if (users == null)
+            {
+                return NotFound();
+            }
+
+            var responseUser = new ResponseUsers(users);
+
+            return Ok(responseUser);
+        }
+
 
         // GET: api/Users/5
         [ResponseType(typeof(Users))]
